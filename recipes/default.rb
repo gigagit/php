@@ -6,7 +6,7 @@
 app = search(:aws_opsworks_app).first
 app_path = "/var/www/html/#{app['shortname']}"
 
-git_client 'default' do
+package 'git' do
     action :install
 end
 
